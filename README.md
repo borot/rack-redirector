@@ -41,6 +41,10 @@ This is a simple sample that may not work but you will make sense of what can do
         end
       end
 
+      def call(env)
+        #do something
+      end
+
       class << self
         def redirect(location)
           raise RedirectRequest.new(location)
@@ -52,3 +56,4 @@ This is a simple sample that may not work but you will make sense of what can do
       end
     end
 
+    run MyApp.new
